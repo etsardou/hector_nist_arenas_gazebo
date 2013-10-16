@@ -288,24 +288,9 @@ void Arena::saveWorldSdf(const QString& filename)
 
     writer.writeTextElement("gravity", "0 0 -9.81");
 
-    writer.writeStartElement("ode");
-
-    writer.writeStartElement("solver");
-    writer.writeTextElement("type","quick");
-    writer.writeTextElement("dt","0.001");
-    writer.writeTextElement("iters","10");
-    writer.writeTextElement("sor","1.3");
-    writer.writeEndElement();
-
-    writer.writeStartElement("constraints");
-    writer.writeTextElement("cfm","0.0");
-    writer.writeTextElement("erp","0.2");
-    writer.writeTextElement("contact_max_correcting_vel","100.0");
-    writer.writeTextElement("contact_surface_layer","0.001");
-    writer.writeEndElement();
-
-    writer.writeEndElement(); // ode
-    writer.writeTextElement("update_rate", "1000");
+     writer.writeTextElement("max_step_size", "0.001");
+     writer.writeTextElement("real_time_factor", "1");
+     writer.writeTextElement("real_time_update_rate", "1000");
 
     writer.writeEndElement(); // physics
 
