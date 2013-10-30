@@ -5,6 +5,9 @@
   <element type="small_wall"/>
   
   <element type="small_wall_qr"/>
+  <element type="small_wall_qr2"/>
+  <element type="small_wall_qr3"/>
+  <element type="small_wall_qr4"/>
   
   <element type="tall_wall"/>
   <element type="fiducial_barrel"/>
